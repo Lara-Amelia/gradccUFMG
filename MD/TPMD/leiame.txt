@@ -1,7 +1,4 @@
-﻿Nome: Lara Amélia Maia de Freitas    Matrícula: 2024005912
-
-
-VISÃO GERAL
+﻿VISÃO GERAL
 Este programa (fractais.c) gera 3 fractais distintos. Os fractais gerados são:
 (i) Fractal Onda Senoidal 1 de von Koch.
 (ii) Fractal Preenchimento de Espaço de Hilbert.
