@@ -1,0 +1,36 @@
+﻿Nome: Lara Amélia Maia de Freitas    Matrícula: 2024005912
+
+
+VISÃO GERAL
+Este programa (fractais.c) gera 3 fractais distintos. Os fractais gerados são:
+(i) Fractal Onda Senoidal 1 de von Koch.
+(ii) Fractal Preenchimento de Espaço de Hilbert.
+(iii) Fractal Hexagonal Gosper.
+Os fractais são gerados de forma iterativa a partir da aplicação dos L-Sistemas que os definem, e os resultados obtidos são salvos em 3 arquivos de texto (“i.txt”, “ii.txt”, “iii.txt”), um para cada fractal, nomeados de acordo com o número correspondente ao fractal que armazenam.
+
+
+PRÉ-REQUISITOS
+Um compilador para linguagem C já deve estar instalado e disponível para uso em sua máquina. Recomenda-se o uso do compilador GCC.
+Pode ser desejável o uso de uma IDE (como VSCode ou CodeBlocks) ou o uso de um editor de texto para facilitar a visualização do código.
+
+
+INSTRUÇÕES PARA COMPILAÇÃO
+Considera-se que está sendo utilizado o compilador GCC.
+1. Abra o terminal (ou linha de comando).
+2. Navegue até o diretório onde o arquivo fractais.c foi salvo.
+3. Execute o seguinte comando para compilar o programa: 
+    gcc fractais.c -o fractais -lm
+    (o comando -lm é necessário para fazer a link-edição com a biblioteca math.h)
+4. Será gerado um arquivo executável nomeado fractais (ou fractais.exe para Windows).
+
+
+INSTRUÇÕES PARA EXECUÇÃO
+1. No terminal, assegure que você ainda está no terminal em que o executável foi salvo.
+2. Execute o programa utilizando o seguinte comando:
+    ./fractais (ou fractais.exe, caso esteja no Windows)
+3. Quando solicitado (“Digite o número de iterações desejado: ”), insira um número inteiro com o número de iterações que deseja gerar. Este é o único input requerido pelo programa. 
+4. Após a inserção do número de iterações, o programa irá gerar os arquivos de texto i.txt, ii.txt e iii.txt contendo os resultados dos fractais. Os arquivos de saída serão gerados no diretório em que o programa foi executado.
+
+
+OBSERVAÇÕES 
+O número de iterações com o qual o programa consegue lidar obtendo resultados satisfatórios é limitado. Valores muito elevados de iterações podem causar erros. Recomenda-se que seja inserido um valor entre 0 e 6.
