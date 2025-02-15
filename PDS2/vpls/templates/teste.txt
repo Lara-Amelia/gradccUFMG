@@ -1,0 +1,65 @@
+#ifndef VETOR_H
+#define VETOR_H
+#include <iostream>
+
+template <typename T>
+class Vetor
+{
+    private:
+    T* vetor;
+    int n, atual;
+
+    public:
+    Vetor(int n)
+    {
+        this->n = n;
+        this->atual = 0;
+        vetor = new T[n];
+    }
+    Vetor(T* vet)
+    {
+        this->n = vet->n;
+        this->atual = vet->atual;
+        T* copia = new T[vet->n];
+        for(int i = 0; i < atual; i++)
+        {
+            copia[i] = vet[i];
+        }
+    }
+    
+    ~Vetor()
+    {
+        delete[] vetor;
+    }
+
+    void SetElemento(int i, T x)
+    {
+       for(int k = this->atual; k > i; k--)
+       {
+          vetor[k] = vetor[k-1];
+       }
+       vetor[i] = x;
+       ++atual;
+    }
+
+    T GetElemento(int i)
+    {
+       return vetor[i];
+    }
+
+    void AdicionaElemento(T x)
+    {
+        atual++;
+        vetor[atual] = x;
+    }
+
+    void Imprime()
+    {
+        for(int j = 0; j < atual; j++)
+        {
+            std::cout << vetor[j] << " ";
+        }
+        std::cout << std::endl;
+    }
+};
+#endif
